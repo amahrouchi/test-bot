@@ -1,7 +1,5 @@
 <?php
-echo 'toto';
-exit;
-error_log(print_r($_GET['hub'], true), 3, './log');
+error_log(print_r($_GET['hub'], true), 3, 'log.txt');
 
 if ($_GET['hub']['mode'] === 'subscribe' && $_GET['hub']['verify_token'] === 'my_token_is_awesome')
 {
