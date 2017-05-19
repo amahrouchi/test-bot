@@ -1,4 +1,5 @@
 <?php
+var_dump($_GET);
 
 if ($_GET['hub']['mode'] === 'subscribe' && $_GET['hub']['verify_token'] === 'my_token_is_awesome')
 {
