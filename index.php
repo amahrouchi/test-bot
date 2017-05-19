@@ -1,5 +1,5 @@
 <?php
-echo $_GET['hub.mode'];
+echo 'toto';
 exit;
 error_log(print_r($_GET['hub'], true), 3, './log');
 
