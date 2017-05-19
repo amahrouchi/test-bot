@@ -1,7 +1,7 @@
 <?php
 
-if ($_GET['mode'] === 'subscribe' && $_GET['verify_token'] === 'my_token_is_awesome')
+if ($_GET['hub']['mode'] === 'subscribe' && $_GET['hub']['verify_token'] === 'my_token_is_awesome')
 {
-	echo $_GET['challenge'];
+	echo $_GET['hub']['challenge'];
 }
 
