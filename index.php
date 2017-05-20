@@ -11,8 +11,7 @@ if (isset($_GET) && !empty($_GET))
 	}
 }
 
-error_log($_SERVER['REQUEST_METHOD']);
-if (isset($_POST) && !empty($_POST))
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 	$body = json_decode(file_get_contents('php://input'), true);
 
