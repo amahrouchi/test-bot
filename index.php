@@ -14,6 +14,7 @@ if (isset($_GET) && !empty($_GET))
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 	$body = json_decode(file_get_contents('php://input'), true);
+	error_log($body);
 
 	if ($body['object'] === 'page')
 	{
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 			{
 				$sender = $messaging['sender']['id'];
 				$recipient = $messaging['recipient']['id'];
-				$message = $messaging['message']['text'] . "($sender|$recipient)";
+				$message = $messaging['message']['text'] . " ($sender|$recipient)";
 
 
 
