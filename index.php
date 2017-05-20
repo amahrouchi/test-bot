@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 			{
 				$sender = $messaging['sender']['id'];
 				$recipient = $messaging['recipient']['id'];
-				$message = $messaging['message'] . "($sender|$recipient)";
+				$message = $messaging['message']['text'] . "($sender|$recipient)";
 
 
 
