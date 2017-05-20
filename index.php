@@ -14,6 +14,7 @@ if (isset($_GET) && !empty($_GET))
 if (isset($_POST) && !empty($_POST))
 {
 	$body = json_decode(file_get_contents('php://input'), true);
+	error_log(body);
 
 	if ($body['object'] === 'page')
 	{
