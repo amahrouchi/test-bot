@@ -42,7 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 									'buttons' => [
 										[
 											'type' => 'web_url',
-											'url' => 'http://www.example.com/login'
+											'url' => 'http://www.example.com/login',
+											'title' => 'button title',
 										]
 									]
 								]
