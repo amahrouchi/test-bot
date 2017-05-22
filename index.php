@@ -29,10 +29,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 
 
 				$url = 'https://graph.facebook.com/v2.6/me/messages?access_token=' . $pageToken;
-				$payload = [
-					'recipient' => ['id' => $sender],
-					'message' => ['text' => $message],
-				];
+
+				if ($messaging['message']['text'] === 'login')
+				{
+					$payload = [
+						'recipient' => ['id' => $sender],
+						'message' => [
+							'attachment' => [
+								'type' => 'template',
+								'payload' => [
+									'template_type' => 'button',
+									'buttons' => [
+										'type' => 'account_linking',
+										'url' => 'http://www.example.com/login'
+									]
+								]
+							]
+						],
+					];
+				}
+				else
+				{
+
+					$payload = [
+						'recipient' => ['id' => $sender],
+						'message' => [
+							'text' => $message
+						],
+					];
+				}
 				$options = array(
 				    'http' => array(
 				        'header'  => "Content-type: application/json\r\n",
