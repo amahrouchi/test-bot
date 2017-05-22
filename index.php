@@ -40,8 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 									'template_type' => 'button',
 									'text' => 'login button',
 									'buttons' => [
-										'type' => 'account_linking',
-										'url' => 'http://www.example.com/login'
+										[
+											'type' => 'account_linking',
+											'url' => 'http://www.example.com/login'
+										]
 									]
 								]
 							]
@@ -50,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 				}
 				else
 				{
-
 					$payload = [
 						'recipient' => ['id' => $sender],
 						'message' => [
