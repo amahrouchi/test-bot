@@ -14,7 +14,6 @@ if (isset($_GET) && !empty($_GET))
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
 	$body = json_decode(file_get_contents('php://input'), true);
-	error_log(print_r($body, true));
 
 	if ($body['object'] === 'page')
 	{
@@ -68,6 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 				);
 				$context  = stream_context_create($options);
 				$result = file_get_contents($url, false, $context);
+
+				error_log($result);
 			}
 		}
 	}
