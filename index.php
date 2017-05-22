@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 				$context  = stream_context_create($options);
 				$result = file_get_contents($url, false, $context);
 
-				error_log($result);
+				error_log('===> ' . $result);
 			}
 		}
 	}
