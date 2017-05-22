@@ -41,9 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 									'text' => 'login button',
 									'buttons' => [
 										[
-											'type' => 'web_url',
+											'type' => 'account_linking',
 											'url' => 'http://www.example.com/login',
-											'title' => 'button title',
+											// 'title' => 'button title',
 										]
 									]
 								]
