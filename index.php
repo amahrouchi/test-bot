@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
 								'type' => 'template',
 								'payload' => [
 									'template_type' => 'button',
-									'text' => 'login button',
+									// 'text' => 'login button',
 									'buttons' => [
 										[
 											'type' => 'account_link',
